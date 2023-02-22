@@ -1,34 +1,258 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {
+  Badge,
+  Button,
+  Card,
+  CardBody,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <Grid m={30} gridTemplateColumns={"repeat(auto-fill, minmax(280px, 1fr))"} gap={5}>
+      <Card maxW="sm" bg="none" border={"1px solid #a8b5c8"}>
+        <CardBody>
+          <Image
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Green double couch with wooden legs"
+            rounded="full"
+            w={180}
+            h={180}
+            mx={"auto"}
+            objectFit={"cover"}
+          />
+          <Stack mt="6" spacing="3">
+            <Heading size="md" as="h2" textAlign={"center"}>
+              Living room Sofa
+            </Heading>
+            <Text fontSize="sm" textAlign={"center"}>
+              This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned
+              spaces and for people who love a chic design with a sprinkle of vintage design.
+            </Text>
 
-export default App
+            <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
+              <Text fontSize="sm" my={1}>
+                Price:
+                <Badge mx="2" colorScheme="purple">
+                  120
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1}>
+                Brand:
+                <Badge mx="2" colorScheme="green">
+                  Nike
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Discount:
+                <Badge mx="2" colorScheme="green">
+                  10%
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Category:
+                <Badge mx="2" colorScheme="purple">
+                  SMARTPHONES
+                </Badge>
+              </Text>
+            </Flex>
+          </Stack>
+          <Button
+            as={RouterLink}
+            to={`/products/1`}
+            colorScheme="purple"
+            size="md"
+            w={"full"}
+            mt={4}
+          >
+            View Details
+          </Button>
+        </CardBody>
+      </Card>
+      <Card maxW="sm" bg="none" border={"1px solid #a8b5c8"}>
+        <CardBody>
+          <Image
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Green double couch with wooden legs"
+            rounded="full"
+            w={180}
+            h={180}
+            mx={"auto"}
+            objectFit={"cover"}
+          />
+          <Stack mt="6" spacing="3">
+            <Heading size="md" as="h2" textAlign={"center"}>
+              Living room Sofa
+            </Heading>
+            <Text fontSize="sm" textAlign={"center"}>
+              This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned
+              spaces and for people who love a chic design with a sprinkle of vintage design.
+            </Text>
+
+            <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
+              <Text fontSize="sm" my={1}>
+                Price:
+                <Badge mx="2" colorScheme="purple">
+                  120
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1}>
+                Brand:
+                <Badge mx="2" colorScheme="green">
+                  Nike
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Discount:
+                <Badge mx="2" colorScheme="green">
+                  10%
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Category:
+                <Badge mx="2" colorScheme="purple">
+                  SMARTPHONES
+                </Badge>
+              </Text>
+            </Flex>
+          </Stack>
+          <Button
+            as={RouterLink}
+            to={`/products/1`}
+            colorScheme="purple"
+            size="md"
+            w={"full"}
+            mt={4}
+          >
+            View Details
+          </Button>
+        </CardBody>
+      </Card>
+      <Card maxW="sm" bg="none" border={"1px solid #a8b5c8"}>
+        <CardBody>
+          <Image
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Green double couch with wooden legs"
+            rounded="full"
+            w={180}
+            h={180}
+            mx={"auto"}
+            objectFit={"cover"}
+          />
+          <Stack mt="6" spacing="3">
+            <Heading size="md" as="h2" textAlign={"center"}>
+              Living room Sofa
+            </Heading>
+            <Text fontSize="sm" textAlign={"center"}>
+              This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned
+              spaces and for people who love a chic design with a sprinkle of vintage design.
+            </Text>
+
+            <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
+              <Text fontSize="sm" my={1}>
+                Price:
+                <Badge mx="2" colorScheme="purple">
+                  120
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1}>
+                Brand:
+                <Badge mx="2" colorScheme="green">
+                  Nike
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Discount:
+                <Badge mx="2" colorScheme="green">
+                  10%
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Category:
+                <Badge mx="2" colorScheme="purple">
+                  SMARTPHONES
+                </Badge>
+              </Text>
+            </Flex>
+          </Stack>
+          <Button
+            as={RouterLink}
+            to={`/products/1`}
+            colorScheme="purple"
+            size="md"
+            w={"full"}
+            mt={4}
+          >
+            View Details
+          </Button>
+        </CardBody>
+      </Card>
+      <Card maxW="sm" bg="none" border={"1px solid #a8b5c8"}>
+        <CardBody>
+          <Image
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Green double couch with wooden legs"
+            rounded="full"
+            w={180}
+            h={180}
+            mx={"auto"}
+            objectFit={"cover"}
+          />
+          <Stack mt="6" spacing="3">
+            <Heading size="md" as="h2" textAlign={"center"}>
+              Living room Sofa
+            </Heading>
+            <Text fontSize="sm" textAlign={"center"}>
+              This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned
+              spaces and for people who love a chic design with a sprinkle of vintage design.
+            </Text>
+
+            <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
+              <Text fontSize="sm" my={1}>
+                Price:
+                <Badge mx="2" colorScheme="purple">
+                  120
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1}>
+                Brand:
+                <Badge mx="2" colorScheme="green">
+                  Nike
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Discount:
+                <Badge mx="2" colorScheme="green">
+                  10%
+                </Badge>
+              </Text>
+              <Text fontSize="sm" my={1} w={"full"}>
+                Category:
+                <Badge mx="2" colorScheme="purple">
+                  SMARTPHONES
+                </Badge>
+              </Text>
+            </Flex>
+          </Stack>
+          <Button
+            as={RouterLink}
+            to={`/products/1`}
+            colorScheme="purple"
+            size="md"
+            w={"full"}
+            mt={4}
+          >
+            View Details
+          </Button>
+        </CardBody>
+      </Card>
+    </Grid>
+  );
+};
+
+export default App;
