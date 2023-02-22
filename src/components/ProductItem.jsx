@@ -14,7 +14,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const ProductItem = () => {
   return (
-    <Card maxW="sm" bg="none" border={"1px solid #a8b5c8"}>
+    <Card bg="none" border={"1px solid #a8b5c8"}>
       <CardBody>
         <Image
           src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -61,7 +61,18 @@ const ProductItem = () => {
             </Text>
           </Flex>
         </Stack>
-        <Button as={RouterLink} to={`/products/1`} colorScheme="purple" size="md" w={"full"} mt={4}>
+        <Button
+          as={RouterLink}
+          to={`/products/1`}
+          colorScheme="purple"
+          size="md"
+          w={"full"}
+          mt={4}
+          transition={".4s ease-out"}
+          _hover={{
+            backgroundColor: "#9f7aea",
+          }}
+        >
           View Details
         </Button>
       </CardBody>
