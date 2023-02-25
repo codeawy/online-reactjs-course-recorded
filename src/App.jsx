@@ -1,17 +1,15 @@
-import { Container, Grid } from "@chakra-ui/react";
-import ProductItem from "./components/ProductItem";
-import ProductsFilterBy from "./components/ProductsFilterBy";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/Home";
+import LoginPage from "./pages/Login";
 
 const App = () => {
-  const renderProductCards = Array.from({ length: 15 }, (_, idx) => <ProductItem key={idx} />);
-
   return (
-    <Container maxW="1500px" my={20}>
-      <ProductsFilterBy />
-      <Grid gridTemplateColumns={"repeat(auto-fill, minmax(280px, 1fr))"} gap={5}>
-        {renderProductCards}
-      </Grid>
-    </Container>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </>
   );
 };
 
