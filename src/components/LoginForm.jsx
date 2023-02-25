@@ -23,6 +23,7 @@ import {
 import axios from "axios";
 import CookieService from "../services/CookieService";
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../api/axios.config";
 
 export default function LoginForm() {
   const navigate = useNavigate();
@@ -47,8 +48,8 @@ export default function LoginForm() {
     }
 
     setIsLoading(true);
-    axios
-      .post("https://dummyjson.com/auth/login", { username, password })
+    axiosInstance
+      .post("/auth/losssgin", { username, password })
       .then(res => {
         const inDay = 3;
         const expiresAt = 1000 * 60 * 60 * 24 * inDay;
