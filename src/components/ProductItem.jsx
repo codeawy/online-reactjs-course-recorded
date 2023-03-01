@@ -12,12 +12,13 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-const ProductItem = () => {
+const ProductItem = ({ id, title, description, thumbnail, brand, category }) => {
   return (
     <Card bg="none" border={"1px solid #a8b5c8"}>
       <CardBody>
+        {/* IMAGES */}
         <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          src={thumbnail}
           alt="Green double couch with wooden legs"
           rounded="full"
           w={180}
@@ -27,11 +28,10 @@ const ProductItem = () => {
         />
         <Stack mt="6" spacing="3">
           <Heading size="md" as="h2" textAlign={"center"}>
-            Living room Sofa
+            {title}
           </Heading>
           <Text fontSize="sm" textAlign={"center"}>
-            This sofa is perfect for modern tropical spaces, baroque inspired spaces, earthy toned
-            spaces and for people who love a chic design with a sprinkle of vintage design.
+            {description}
           </Text>
 
           <Flex justifyContent={"space-between"} flexWrap={"wrap"}>
@@ -41,29 +41,29 @@ const ProductItem = () => {
                 120
               </Badge>
             </Text>
-            <Text fontSize="sm" my={1}>
-              Brand:
-              <Badge mx="2" colorScheme="green">
-                Nike
-              </Badge>
-            </Text>
-            <Text fontSize="sm" my={1} w={"full"}>
-              Discount:
-              <Badge mx="2" colorScheme="green">
-                10%
-              </Badge>
-            </Text>
-            <Text fontSize="sm" my={1} w={"full"}>
-              Category:
-              <Badge mx="2" colorScheme="purple">
-                SMARTPHONES
-              </Badge>
-            </Text>
+
+            {brand ? (
+              <Text fontSize="sm" my={1}>
+                Brand:
+                <Badge mx="2" colorScheme="green" fontSize="0.6em">
+                  {brand}
+                </Badge>
+              </Text>
+            ) : null}
+
+            {category ? (
+              <Text fontSize="sm" my={1} textAlign={"left"}>
+                Category:
+                <Badge mx="2" colorScheme="green">
+                  {category}
+                </Badge>
+              </Text>
+            ) : null}
           </Flex>
         </Stack>
         <Button
           as={RouterLink}
-          to={`/products/1`}
+          to={`/products/${id}`}
           colorScheme="purple"
           size="md"
           w={"full"}

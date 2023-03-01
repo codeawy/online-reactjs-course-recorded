@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Checkbox, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 
-export default function ProductsFilterBy() {
-  const [checkedItems, setCheckedItems] = useState([false, false, false]);
-
-  const allChecked = checkedItems.every(Boolean);
-  const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
-
+export default function ProductsFilterBy({
+  checkedItems,
+  setCheckedItems,
+  allChecked,
+  isIndeterminate,
+}) {
   return (
     <Flex
       alignItems={"center"}
